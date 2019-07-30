@@ -27,6 +27,11 @@ namespace convenience
         return boost::regex(c_str);
     }
 
+    boost::format operator "" _f(char const* c_str, size_t)
+    {
+        return boost::format(c_str);
+    }
+
     //boost::filesystem::path _to_path(boost::filesystem::directory_entry entry)
     //{
     //    return entry.path();
