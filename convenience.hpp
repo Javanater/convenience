@@ -19,6 +19,7 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/phoenix.hpp>
 #include <boost/regex.hpp>
+#include <boost/hof.hpp>
 
 namespace convenience
 {
@@ -32,21 +33,19 @@ namespace convenience
         return boost::format(c_str);
     }
 
-    //boost::filesystem::path _to_path(boost::filesystem::directory_entry entry)
-    //{
-    //    return entry.path();
-    //}
-
-    //BOOST_PHOENIX_ADAPT_FUNCTION(path, to_path, _to_path, 1);
+    auto _to_path(::boost::filesystem::directory_entry& entry)
+    {
+        return entry.path();
+    }
+    
+    BOOST_PHOENIX_ADAPT_FUNCTION(::boost::filesystem::path, to_path, _to_path, 1);    
 
     auto path_iterator(::boost::filesystem::path p)
     {
         using ::boost::filesystem::directory_iterator;
-        using ::boost::filesystem::directory_entry;
         using ::boost::adaptors::transformed;
         using ::boost::phoenix::placeholders::_1;
-        auto const mem = static_cast<const ::boost::filesystem::path& (directory_entry::*)() const>(&directory_entry::path);
-        return directory_iterator(p) | transformed((_1->*mem)());
+        return directory_iterator(p) | transformed(to_path(_1));
     }
 }
 
