@@ -94,11 +94,26 @@ using boost::format;
 using boost::str;
 using boost::tuple;
 using boost::tie;
+using boost::mem_fn;
+using boost::any;
 
 using boost::trim;
+using boost::trim_copy;
+using boost::trim_left;
+using boost::trim_left_copy;
+using boost::trim_right;
+using boost::trim_right_copy;
+using boost::starts_with;
+using boost::ends_with;
+using boost::contains;
+using boost::to_upper;
+using boost::to_lower;
+using boost::to_upper_copy;
+using boost::to_lower_copy;
 
 using namespace boost::assign;
 using namespace convenience;
 using namespace boost::phoenix::placeholders;
+using namespace boost::chrono;
 
 namespace phx = boost::phoenix;

@@ -8,14 +8,14 @@ HunterGate(
 
 project(convenience)
 
-hunter_add_package(Boost COMPONENTS filesystem regex)
-find_package(Boost CONFIG REQUIRED filesystem regex)
+hunter_add_package(Boost COMPONENTS filesystem regex chrono date_time)
+find_package(Boost CONFIG REQUIRED filesystem regex chrono date_time)
 
 add_library(convenience convenience.hpp using_convenience.hpp)
 
 set_target_properties(convenience PROPERTIES LINKER_LANGUAGE CXX)
 
-target_link_libraries(convenience Boost::filesystem Boost::regex)
+target_link_libraries(convenience Boost::filesystem Boost::regex Boost::chrono Boost::date_time)
 
 add_executable(demo demo.cpp)
 
