@@ -25,6 +25,9 @@
 #include <boost/chrono.hpp>
 #include <boost/date_time.hpp>
 
+//range-v3
+#include <range/v3/all.hpp>
+
 namespace convenience
 {
     boost::regex operator "" _r(char const* c_str, size_t)

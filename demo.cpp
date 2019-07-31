@@ -7,13 +7,15 @@ int main()
     for (auto e : path_iterator(".") | indexed())
         cout << "%02d"_f % e.index() << e.value() << endl;
 
-    for (auto i : irange(3))
-        cout << "%02d"_f % i << endl;
+    vector<int> v;
+    v += 3,5,9;
 
-    vector<int> ints;
-    ints += 3,5,9;
+    for (const auto& t : enumerate(v))
+        cout << "hello" << endl;
 
-    for_each(ints, cout << _1 << endl);
+    for_each(v, cout << _1 << endl);
 
+    for_each(ints(1,3), cout << _1 << endl);
+    
     cout << steady_clock::now() << endl;
 }
