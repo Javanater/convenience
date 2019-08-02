@@ -11,15 +11,8 @@ project(convenience)
 hunter_add_package(Boost COMPONENTS filesystem regex chrono date_time)
 find_package(Boost CONFIG REQUIRED filesystem regex chrono date_time)
 
-hunter_add_package(range-v3)
-find_package(range-v3 CONFIG REQUIRED)
-
 add_library(convenience convenience.hpp using_convenience.hpp)
 
 set_target_properties(convenience PROPERTIES LINKER_LANGUAGE CXX)
 
-target_link_libraries(convenience Boost::filesystem Boost::regex Boost::chrono Boost::date_time range-v3)
-
-add_executable(demo demo.cpp)
-
-target_link_libraries(demo PRIVATE convenience)
+target_link_libraries(convenience Boost::filesystem Boost::regex Boost::chrono Boost::date_time)
