@@ -168,6 +168,15 @@ using boost::phoenix::placeholders::_7;
 using boost::phoenix::placeholders::_8;
 using boost::phoenix::placeholders::_9;
 
+using boost::gregorian::date;
+using boost::gregorian::weeks;
+using boost::gregorian::days;
+using boost::gregorian::months;
+using boost::gregorian::years;
+using boost::gregorian::day_clock;
+using boost::gregorian::date_period;
+using boost::gregorian::day_iterator;
+
 using namespace boost::assign;
 using namespace convenience;
 using namespace boost::chrono;
