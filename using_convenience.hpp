@@ -158,9 +158,18 @@ using boost::filesystem::temp_directory_path;
 using boost::filesystem::unique_path;
 using boost::filesystem::weakly_canonical;
 
+using boost::phoenix::placeholders::_1;
+using boost::phoenix::placeholders::_2;
+using boost::phoenix::placeholders::_3;
+using boost::phoenix::placeholders::_4;
+using boost::phoenix::placeholders::_5;
+using boost::phoenix::placeholders::_6;
+using boost::phoenix::placeholders::_7;
+using boost::phoenix::placeholders::_8;
+using boost::phoenix::placeholders::_9;
+
 using namespace boost::assign;
 using namespace convenience;
-using namespace boost::phoenix::placeholders;
 using namespace boost::chrono;
 
 namespace phx = boost::phoenix;
