@@ -37,13 +37,14 @@ namespace convenience
         return boost::format(c_str);
     }
 
-#define nullary_mem(_fn_) [](auto& a){return a._fn_();}
-
-    auto path_iterator(::boost::filesystem::path p)
+    auto path_iterator(boost::filesystem::path p)
     {
-        using ::boost::filesystem::directory_iterator;
-        using ::boost::adaptors::transformed;
-        return directory_iterator(p) | transformed(nullary_mem(path));
+        using boost::filesystem::directory_iterator;
+        using boost::adaptors::transformed;
+        return
+            directory_iterator(p) |
+            transformed([](auto& e){return e.path();})
+            ;
     }
 }
 
