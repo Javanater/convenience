@@ -56,7 +56,7 @@ namespace convenience
         using ranges::view::transform;
         using ranges::make_iterator_range;
         return
-            make_iterator_range(directory_iterator(p), {}) |
+            make_iterator_range(directory_iterator(p), directory_iterator()) |
             transform([](auto& e){return e.path();})
             ;
     }
