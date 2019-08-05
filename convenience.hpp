@@ -54,8 +54,9 @@ namespace convenience
     {
         using boost::filesystem::directory_iterator;
         using ranges::view::transform;
+        using ranges::make_iterator_range;
         return
-            directory_iterator(p) |
+            make_iterator_range(directory_iterator(p), {}) |
             transform([](auto& e){return e.path();})
             ;
     }
