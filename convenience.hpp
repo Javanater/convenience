@@ -25,6 +25,9 @@
 #include <boost/chrono.hpp>
 #include <boost/date_time.hpp>
 
+// range-v3
+#include <range/v3/all.hpp>
+
 namespace convenience
 {
     boost::regex operator "" _r(char const* c_str, size_t)
@@ -44,6 +47,16 @@ namespace convenience
         return
             directory_iterator(p) |
             transformed([](auto& e){return e.path();})
+            ;
+    }
+
+    auto path_range(boost::filesystem::path p)
+    {
+        using boost::filesystem::directory_iterator;
+        using ranges::view::transform;
+        return
+            directory_iterator(p) |
+            transform([](auto& e){return e.path();})
             ;
     }
 }
