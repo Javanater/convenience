@@ -9,6 +9,7 @@ using std::cout;
 using std::endl;
 using std::cerr;
 using std::cin;
+using std::string;
 
 using boost::filesystem::path;
 using boost::filesystem::exists;
@@ -96,6 +97,7 @@ using boost::tuple;
 using boost::tie;
 using boost::mem_fn;
 using boost::any;
+using boost::lexical_cast;
 
 using boost::trim;
 using boost::trim_copy;
