@@ -113,6 +113,8 @@ using boost::to_lower;
 using boost::to_upper_copy;
 using boost::to_lower_copy;
 
+using boost::algorithm::join;
+
 using boost::filesystem::path;
 using boost::filesystem::filesystem_error;
 using boost::filesystem::file_status;
