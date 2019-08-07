@@ -52,6 +52,18 @@ namespace convenience
             ;
     }
 
+    bool regex_match_str(std::string s, boost::regex r)
+    {
+        return boost::regex_match(s, r);
+    }
+
+    bool regex_match_str(boost::filesystem::path s, boost::regex r)
+    {
+        return boost::regex_match(s.generic_string(), r);
+    }
+
+    BOOST_PHOENIX_ADAPT_FUNCTION(bool, regex_match, regex_match_str, 2);
+
     auto path_range(boost::filesystem::path p)
     {
         using boost::filesystem::directory_iterator;
