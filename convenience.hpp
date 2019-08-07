@@ -25,6 +25,7 @@
 #include <boost/chrono.hpp>
 #include <boost/date_time.hpp>
 #include <boost/lexical_cast.hpp>
+#include <boost/gil.hpp>
 
 // range-v3
 #include <range/v3/all.hpp>

@@ -10,6 +10,8 @@ using std::endl;
 using std::cerr;
 using std::cin;
 using std::string;
+using std::ostream;
+using std::istream;
 
 using boost::filesystem::path;
 using boost::filesystem::exists;
@@ -181,9 +183,11 @@ using boost::gregorian::day_clock;
 using boost::gregorian::date_period;
 using boost::gregorian::day_iterator;
 
+using namespace boost::gil;
 using namespace boost::assign;
 using namespace convenience;
 using namespace boost::chrono;
 
 namespace phx = boost::phoenix;
 namespace fs = boost::filesystem;
+namespace mpl = boost::mpl;
