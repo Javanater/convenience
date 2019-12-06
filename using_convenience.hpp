@@ -177,6 +177,8 @@ using boost::gregorian::day_clock;
 using boost::gregorian::date_period;
 using boost::gregorian::day_iterator;
 
+using ranges::view::enumerate;
+
 using namespace boost::assign;
 using namespace convenience;
 using namespace boost::chrono;
