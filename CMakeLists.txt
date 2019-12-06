@@ -1,17 +1,8 @@
 cmake_minimum_required(VERSION 3.2)
 
-include("cmake/HunterGate.cmake")
-HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.23.205.tar.gz"
-    SHA1 "eba80d3028c856c6bedb5d8d9627b1b3bba19634"
-)
-
 project(convenience)
 
-hunter_add_package(Boost COMPONENTS filesystem regex chrono date_time)
 find_package(Boost CONFIG REQUIRED filesystem regex chrono date_time)
-
-hunter_add_package(range-v3)
 find_package(range-v3 CONFIG REQUIRED)
 
 add_library(convenience convenience.hpp using_convenience.hpp)
