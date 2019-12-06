@@ -49,17 +49,6 @@ namespace convenience
             transformed([](auto& e){return e.path();})
             ;
     }
-
-    auto path_range(boost::filesystem::path p)
-    {
-        using boost::filesystem::directory_iterator;
-        using ranges::view::transform;
-        using ranges::make_iterator_range;
-        return
-            make_iterator_range(directory_iterator(p), directory_iterator()) |
-            transform([](auto& e){return e.path();})
-            ;
-    }
 }
 
 #endif
