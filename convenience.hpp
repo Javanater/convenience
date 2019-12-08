@@ -13,6 +13,8 @@
 #include <memory>
 #include <thread>
 #include <mutex>
+#include <random>
+#include <algorithm>
 
 //boost
 #include <boost/filesystem.hpp>

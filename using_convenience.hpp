@@ -11,6 +11,10 @@ using std::cout;
 using std::endl;
 using std::cerr;
 using std::cin;
+using std::shuffle;
+using std::random_device;
+using std::mt19937;
+using std::string;
 
 using boost::filesystem::path;
 using boost::filesystem::exists;
