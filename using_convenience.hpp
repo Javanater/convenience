@@ -107,6 +107,7 @@ using boost::mem_fn;
 using boost::any;
 using boost::optional;
 using boost::replace_all;
+using boost::get;
 
 using boost::trim;
 using boost::trim_copy;
@@ -201,3 +202,4 @@ using namespace boost::chrono;
 namespace phx = boost::phoenix;
 namespace fs = boost::filesystem;
 namespace po = boost::program_options;
+namespace fusion = boost::fusion;
