@@ -15,6 +15,9 @@ using std::shuffle;
 using std::random_device;
 using std::mt19937;
 using std::string;
+using std::ostream;
+using std::exception;
+using std::runtime_error;
 
 using boost::filesystem::path;
 using boost::filesystem::exists;
@@ -102,6 +105,8 @@ using boost::tuple;
 using boost::tie;
 using boost::mem_fn;
 using boost::any;
+using boost::optional;
+using boost::replace_all;
 
 using boost::trim;
 using boost::trim_copy;
@@ -183,9 +188,16 @@ using boost::gregorian::day_clock;
 using boost::gregorian::date_period;
 using boost::gregorian::day_iterator;
 
+using boost::program_options::options_description;
+using boost::program_options::positional_options_description;
+using boost::program_options::variables_map;
+
+using boost::hof::unpack;
+
 using namespace boost::assign;
 using namespace convenience;
 using namespace boost::chrono;
 
 namespace phx = boost::phoenix;
 namespace fs = boost::filesystem;
+namespace po = boost::program_options;
