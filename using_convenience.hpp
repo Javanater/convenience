@@ -18,6 +18,8 @@ using std::string;
 using std::ostream;
 using std::exception;
 using std::runtime_error;
+using std::experimental::string_view;
+using std::ios;
 
 using boost::filesystem::path;
 using boost::filesystem::exists;
@@ -195,6 +197,9 @@ using boost::program_options::variables_map;
 
 using boost::hof::unpack;
 
+using boost::process::system;
+using boost::process::search_path;
+
 using namespace boost::assign;
 using namespace convenience;
 using namespace boost::chrono;
@@ -203,3 +208,4 @@ namespace phx = boost::phoenix;
 namespace fs = boost::filesystem;
 namespace po = boost::program_options;
 namespace fusion = boost::fusion;
+namespace bp = boost::process;

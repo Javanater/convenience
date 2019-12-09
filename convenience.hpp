@@ -15,6 +15,7 @@
 #include <mutex>
 #include <random>
 #include <algorithm>
+#include <string_view>
 
 //boost
 #include <boost/filesystem.hpp>
@@ -30,8 +31,6 @@
 #include <boost/mem_fn.hpp>
 #include <boost/any.hpp>
 #include <boost/chrono.hpp>
-#include <boost/date_time.hpp>
-
 #include <boost/date_time.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/program_options.hpp>
@@ -54,6 +53,7 @@
 #include <boost/random/uniform_01.hpp>
 #include <boost/random/uniform_real_distribution.hpp>
 #include <boost/optional.hpp>
+#include <boost/process.hpp>
 
 namespace convenience
 {
