@@ -1,3 +1,5 @@
+#define BOOST_BIND_NO_PLACEHOLDERS
+
 #include "convenience.hpp"
 
 using std::vector;
@@ -9,9 +11,20 @@ using std::cout;
 using std::endl;
 using std::cerr;
 using std::cin;
+using std::istream;
+using std::array;
+using std::min;
+using std::max;
+using std::abs;
+using std::shuffle;
+using std::random_device;
+using std::mt19937;
 using std::string;
 using std::ostream;
-using std::istream;
+using std::exception;
+using std::runtime_error;
+using std::experimental::string_view;
+using std::ios;
 
 using boost::filesystem::path;
 using boost::filesystem::exists;
@@ -100,6 +113,9 @@ using boost::tie;
 using boost::mem_fn;
 using boost::any;
 using boost::lexical_cast;
+using boost::optional;
+using boost::replace_all;
+using boost::get;
 
 using boost::trim;
 using boost::trim_copy;
@@ -173,6 +189,7 @@ using boost::phoenix::placeholders::_6;
 using boost::phoenix::placeholders::_7;
 using boost::phoenix::placeholders::_8;
 using boost::phoenix::placeholders::_9;
+using boost::phoenix::at_c;
 
 using boost::gregorian::date;
 using boost::gregorian::weeks;
@@ -183,12 +200,27 @@ using boost::gregorian::day_clock;
 using boost::gregorian::date_period;
 using boost::gregorian::day_iterator;
 
+using boost::random::mt19937;
+using boost::random::random_device;
+using boost::random::uniform_int_distribution;
+using boost::random::uniform_01;
 
+//using ranges::view::enumerate;
 
-using namespace boost::gil;
+using boost::program_options::options_description;
+using boost::program_options::positional_options_description;
+using boost::program_options::variables_map;
+
+using boost::hof::unpack;
+
+using boost::process::system;
+using boost::process::search_path;
+
 using namespace boost::assign;
 using namespace convenience;
 using namespace boost::chrono;
+
+using tcp = net::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 
 namespace phx = boost::phoenix;
 namespace fs = boost::filesystem;
@@ -197,5 +229,6 @@ namespace beast = boost::beast; // from <boost/beast.hpp>
 namespace http = beast::http;   // from <boost/beast/http.hpp>
 namespace net = boost::asio;    // from <boost/asio.hpp>
 namespace ssl = net::ssl;       // from <boost/asio/ssl.hpp>
-
-using tcp = net::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
+namespace po = boost::program_options;
+namespace fusion = boost::fusion;
+namespace bp = boost::process;
