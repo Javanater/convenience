@@ -181,6 +181,7 @@ using boost::phoenix::placeholders::_6;
 using boost::phoenix::placeholders::_7;
 using boost::phoenix::placeholders::_8;
 using boost::phoenix::placeholders::_9;
+using boost::phoenix::at_c;
 
 using boost::gregorian::date;
 using boost::gregorian::weeks;

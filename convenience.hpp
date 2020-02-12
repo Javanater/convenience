@@ -55,6 +55,9 @@
 #include <boost/optional.hpp>
 #include <boost/process.hpp>
 
+//other
+#include <range/v3/all.hpp>
+
 namespace convenience
 {
 inline boost::regex operator "" _r(char const* c_str, size_t)
