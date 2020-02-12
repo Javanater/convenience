@@ -8,6 +8,8 @@
 #include <set>
 #include <deque>
 #include <list>
+#include <stdexcept>
+#include <array>
 #include <stack>
 #include <sstream>
 #include <memory>
@@ -32,6 +34,7 @@
 #include <boost/any.hpp>
 #include <boost/chrono.hpp>
 #include <boost/date_time.hpp>
+#include <boost/random/random_device.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/program_options.hpp>
 #include <boost/iterator/iterator_facade.hpp>
@@ -55,7 +58,7 @@
 #include <boost/optional.hpp>
 #include <boost/process.hpp>
 
-//other
+// range-v3
 #include <range/v3/all.hpp>
 
 namespace convenience
@@ -157,6 +160,17 @@ BOOST_HOF_STATIC_LAMBDA_FUNCTION(auto_make_tuple) = [](auto... as)
 {
 	return make_tuple(as...);
 };
+
+//    auto path_range(boost::filesystem::path p)
+//    {
+//        using boost::filesystem::directory_iterator;
+//        using ranges::views::transform;
+//        using ranges::iterator_range;
+//        return
+//            iterator_range(directory_iterator(p), directory_iterator()) |
+//            transform([](auto& e){return e.path();})
+//            ;
+//    }
 
 class unwinder : public std::stack<boost::function<void()>>
 {

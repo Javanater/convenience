@@ -11,6 +11,10 @@ using std::cout;
 using std::endl;
 using std::cerr;
 using std::cin;
+using std::array;
+using std::min;
+using std::max;
+using std::abs;
 using std::shuffle;
 using std::random_device;
 using std::mt19937;
@@ -191,6 +195,13 @@ using boost::gregorian::years;
 using boost::gregorian::day_clock;
 using boost::gregorian::date_period;
 using boost::gregorian::day_iterator;
+
+using boost::random::mt19937;
+using boost::random::random_device;
+using boost::random::uniform_int_distribution;
+using boost::random::uniform_01;
+
+//using ranges::view::enumerate;
 
 using boost::program_options::options_description;
 using boost::program_options::positional_options_description;
