@@ -183,6 +183,8 @@ using boost::gregorian::day_clock;
 using boost::gregorian::date_period;
 using boost::gregorian::day_iterator;
 
+
+
 using namespace boost::gil;
 using namespace boost::assign;
 using namespace convenience;
@@ -191,3 +193,9 @@ using namespace boost::chrono;
 namespace phx = boost::phoenix;
 namespace fs = boost::filesystem;
 namespace mpl = boost::mpl;
+namespace beast = boost::beast; // from <boost/beast.hpp>
+namespace http = beast::http;   // from <boost/beast/http.hpp>
+namespace net = boost::asio;    // from <boost/asio.hpp>
+namespace ssl = net::ssl;       // from <boost/asio/ssl.hpp>
+
+using tcp = net::ip::tcp;       // from <boost/asio/ip/tcp.hpp>

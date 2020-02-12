@@ -26,6 +26,14 @@
 #include <boost/date_time.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/gil.hpp>
+#include <boost/beast/core.hpp>
+#include <boost/beast/http.hpp>
+#include <boost/beast/ssl.hpp>
+#include <boost/beast/version.hpp>
+#include <boost/asio/connect.hpp>
+#include <boost/asio/ip/tcp.hpp>
+#include <boost/asio/ssl/error.hpp>
+#include <boost/asio/ssl/stream.hpp>
 
 // range-v3
 #include <range/v3/all.hpp>
