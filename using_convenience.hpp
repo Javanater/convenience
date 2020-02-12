@@ -9,6 +9,10 @@ using std::cout;
 using std::endl;
 using std::cerr;
 using std::cin;
+using std::array;
+using std::min;
+using std::max;
+using std::abs;
 
 using boost::filesystem::path;
 using boost::filesystem::exists;
@@ -177,7 +181,12 @@ using boost::gregorian::day_clock;
 using boost::gregorian::date_period;
 using boost::gregorian::day_iterator;
 
-using ranges::view::enumerate;
+using boost::random::mt19937;
+using boost::random::random_device;
+using boost::random::uniform_int_distribution;
+using boost::random::uniform_01;
+
+//using ranges::view::enumerate;
 
 using namespace boost::assign;
 using namespace convenience;

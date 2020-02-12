@@ -8,6 +8,8 @@
 #include <set>
 #include <deque>
 #include <list>
+#include <stdexcept>
+#include <array>
 
 //boost
 #include <boost/filesystem.hpp>
@@ -24,6 +26,8 @@
 #include <boost/any.hpp>
 #include <boost/chrono.hpp>
 #include <boost/date_time.hpp>
+#include <boost/random.hpp>
+#include <boost/random/random_device.hpp>
 
 // range-v3
 #include <range/v3/all.hpp>
@@ -50,16 +54,16 @@ namespace convenience
             ;
     }
 
-    auto path_range(boost::filesystem::path p)
-    {
-        using boost::filesystem::directory_iterator;
-        using ranges::view::transform;
-        using ranges::make_iterator_range;
-        return
-            make_iterator_range(directory_iterator(p), directory_iterator()) |
-            transform([](auto& e){return e.path();})
-            ;
-    }
+//    auto path_range(boost::filesystem::path p)
+//    {
+//        using boost::filesystem::directory_iterator;
+//        using ranges::views::transform;
+//        using ranges::iterator_range;
+//        return
+//            iterator_range(directory_iterator(p), directory_iterator()) |
+//            transform([](auto& e){return e.path();})
+//            ;
+//    }
 }
 
 #endif

@@ -9,6 +9,6 @@ add_library(convenience convenience.hpp using_convenience.hpp)
 
 set_target_properties(convenience PROPERTIES LINKER_LANGUAGE CXX)
 
-target_link_libraries(convenience Boost::filesystem Boost::regex Boost::chrono Boost::date_time range-v3)
+target_link_libraries(convenience PUBLIC Boost::filesystem Boost::regex Boost::chrono Boost::date_time range-v3)
 
 target_include_directories(convenience PUBLIC ${CMAKE_CURRENT_LIST_DIR})
