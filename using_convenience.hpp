@@ -200,8 +200,6 @@ using boost::gregorian::day_clock;
 using boost::gregorian::date_period;
 using boost::gregorian::day_iterator;
 
-using boost::random::mt19937;
-using boost::random::random_device;
 using boost::random::uniform_int_distribution;
 using boost::random::uniform_01;
 
@@ -220,7 +218,7 @@ using namespace boost::assign;
 using namespace convenience;
 using namespace boost::chrono;
 
-using tcp = net::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
+using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 
 namespace phx = boost::phoenix;
 namespace fs = boost::filesystem;
