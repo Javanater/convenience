@@ -4,7 +4,9 @@
 
 using std::vector;
 using std::map;
+using std::multimap;
 using std::set;
+using std::multiset;
 using std::deque;
 using std::list;
 using std::cout;
