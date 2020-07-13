@@ -65,6 +65,7 @@
 #include <boost/random/uniform_real_distribution.hpp>
 #include <boost/optional.hpp>
 #include <boost/process.hpp>
+#include <boost/crc.hpp>
 
 // range-v3
 #include <range/v3/all.hpp>
