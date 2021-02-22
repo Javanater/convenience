@@ -25,7 +25,7 @@ using std::string;
 using std::ostream;
 using std::exception;
 using std::runtime_error;
-using std::experimental::string_view;
+//using std::experimental::string_view;
 using std::ios;
 
 using boost::filesystem::path;
@@ -215,6 +215,11 @@ using boost::hof::unpack;
 
 using boost::process::system;
 using boost::process::search_path;
+
+using boost::this_thread::sleep_for;
+using boost::this_thread::sleep_until;
+using boost::scoped_thread;
+using boost::interrupt_and_join_if_joinable;
 
 using namespace boost::assign;
 using namespace convenience;

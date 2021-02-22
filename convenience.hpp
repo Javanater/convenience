@@ -52,6 +52,7 @@
 #include <boost/accumulators/statistics/rolling_mean.hpp>
 #include <boost/math/constants/constants.hpp>
 #include <boost/thread.hpp>
+#include <boost/thread/scoped_thread.hpp>
 #include <boost/circular_buffer.hpp>
 #include <boost/lockfree/spsc_queue.hpp>
 #include <boost/tuple/tuple.hpp>
